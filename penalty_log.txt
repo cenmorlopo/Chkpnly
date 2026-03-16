@@ -2599,3 +2599,6 @@
 [2026-03-16T17:48:00.719Z] [2597/2598] 23157147027 | penalty=1 | absent=0 | manual=0 -> https://beu-bih.ac.in/result-three?name=B.Tech.+2nd+Semester+Examination%2C+2025+%28Old%29&semester=II&session=2025&regNo=23157147027&exam_held=November%2F2025
 [2026-03-16T17:48:02.033Z] [2598/2598] 23157147029 | penalty=0 | absent=0 | manual=0 -> https://beu-bih.ac.in/result-three?name=B.Tech.+2nd+Semester+Examination%2C+2025+%28Old%29&semester=II&session=2025&regNo=23157147029&exam_held=November%2F2025
 [2026-03-16T17:48:02.936Z] COMPLETE all students finished
+[2026-03-16T19:59:30.892Z] Loaded 2598 grouped students from result_students.txt
+[2026-03-16T19:59:30.895Z] Resuming from lineIndex=2598
+[2026-03-16T19:59:30.895Z] COMPLETE all students finished
