@@ -25,10 +25,7 @@ const CONFIG = {
     frontendName: 'B.Tech. 2nd Semester Examination, 2025 (Old)',
     frontendSession: '2025'
   },
-  oldHtmlBase: {
-    '22': 'http://results.beup.ac.in/ResultsBTech2ndSem2023_B2022Pub.aspx',
-    '23': 'http://results.beup.ac.in/ResultsBTech2ndSem2024_B2023Pub.aspx'
-  },
+  oldHtmlBase: 'http://results.beup.ac.in/ResultsBTech2ndSem2024_B2023Pub.aspx',
   timeoutMs: 30000,
   maxRetries: 3,
   retryDelayMs: 1500,
@@ -122,10 +119,7 @@ function buildCurrentFrontendUrl(regNo) {
 }
 
 function buildOldResultUrl(regNo) {
-  const batch = parseRegNo(regNo).admission_year;
-  const base = CONFIG.oldHtmlBase[batch];
-  if (!base) return null;
-  return `${base}?Sem=II&RegNo=${regNo}`;
+  return `${CONFIG.oldHtmlBase}?Sem=II&RegNo=${regNo}`;
 }
 
 function loadState() {
@@ -564,14 +558,6 @@ async function run() {
 
     const oldUrl = buildOldResultUrl(regNo);
     const newUrl = buildCurrentFrontendUrl(regNo);
-
-    if (!oldUrl) {
-      appendLine(FILES.failed, `${regNo} | UNSUPPORTED_OLD_RESULT_MAPPING | batch=${parseRegNo(regNo).admission_year} | - | ${newUrl}`);
-      log(`[${i + 1}/${rows.length}] ${regNo} -> UNSUPPORTED_OLD_RESULT_MAPPING`);
-      saveState(i + 1);
-      await sleep(CONFIG.politeDelayMs);
-      continue;
-    }
 
     const oldFetched = await fetchWithRetries(oldUrl, false);
     if (oldFetched.kind === 'ERROR') {
