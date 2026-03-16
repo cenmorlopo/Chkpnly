@@ -1,0 +1,1 @@
+reg_no | branch_code | penalized_subject_codes | subject_names | old_shown_grades | new_shown_grades | should_be_grades | shown_sgpa | corrected_sgpa | shown_cgpa | corrected_cgpa | status | old_result_url | new_result_url

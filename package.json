@@ -1,0 +1,12 @@
+{
+  "name": "beu-penalty-calc",
+  "version": "1.0.0",
+  "main": "penalty_calc.js",
+  "scripts": {
+    "start": "node penalty_calc.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0"
+  }
+}

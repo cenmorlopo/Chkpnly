@@ -1,0 +1,1 @@
+reg_no | sem | branch_code | subject_code | subject_name | subject_type | credit | old_shown_grade | new_shown_grade | should_be_grade | shown_gp | corrected_gp | delta_points | new_ese | new_ia | new_total | old_result_url | new_result_url
